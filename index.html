@@ -125,7 +125,15 @@ nav a:hover{color:var(--gold);}
   display: block; opacity: 1; transform: translateY(0); pointer-events: all;
 }
 
-.u-map { background: #fff; border-radius: 12px; padding: 30px 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.08); border: 1px solid rgba(196, 151, 58, 0.2); width: 100%; overflow-x: auto; }
+.u-map { 
+  background: #fff; 
+  border-radius: 12px; 
+  padding: 40px 30px; /* This adds the extra "air" around the map */
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08); 
+  border: 1px solid rgba(196, 151, 58, 0.2); 
+  width: 100%; 
+  overflow-x: auto; 
+}
 .u-grid { display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 12px; min-width: 280px; }
 .map-table { background: var(--ivory); border: 1px solid rgba(196,151,58,0.3); border-radius: 6px; padding: 12px 5px; text-align: center; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); transition: all 0.4s; position: relative; display: flex; align-items: center; justify-content: center; }
 .map-top-table { grid-column: 1 / -1; margin-bottom: 12px; padding: 18px 5px; background: var(--cream);}
@@ -139,19 +147,31 @@ nav a:hover{color:var(--gold);}
   .luxe-program { padding: 40px 20px; }
   .v-time { padding-right: 15px; font-size: 18px; }
   .v-content { padding-left: 15px; }
-  /* This keeps the tables from squishing by allowing horizontal scrolling */
+
+  /* Pulls the tables in by reducing the dance floor area and using flexible fractions */
   .u-grid { 
-    grid-template-columns: 140px 100px 140px; 
-    overflow-x: auto; 
+    grid-template-columns: 1fr 0.8fr 1fr; 
+    gap: 8px; 
   }
-  /* Keeps the 'Dance Floor' text visible but smaller on mobile */
-  .map-dancefloor { 
-    display: flex; 
-    font-size: 18px; 
-  }
+
+  /* Shrinks the table buttons to create visual "space" */
   .map-table {
-    font-size: 9px;
-    padding: 10px 2px;
+    font-size: 8px;
+    padding: 8px 2px;
+    letter-spacing: 0.5px;
+  }
+
+  /* Reduces the height of the top table */
+  .map-top-table {
+    padding: 12px 5px;
+    margin-bottom: 8px;
+  }
+  
+  /* Makes the script text smaller and more subtle */
+  .map-dancefloor {
+    display: flex;
+    font-size: 16px;
+    opacity: 0.4;
   }
 }
 </style>
