@@ -328,6 +328,15 @@ nav a:hover{color:var(--gold);}
       <input class="search-in" id="gsearch" type="text" placeholder="Type your name..." autocomplete="off">
       <div class="autocomplete-list" id="autocomplete-list"></div>
     </div>
+    
+    
+    <div id="seating-locked-container" style="text-align:center; margin: 40px auto; max-width: 500px; padding: 40px 20px; border: 1px dashed var(--gold); border-radius: 8px; background: rgba(196, 151, 58, 0.03); animation: fu 1s ease-out;">
+      <p style="font-family:'Cormorant Garamond'; font-size: 24px; color: var(--brown); font-weight: 300; letter-spacing: 2px; font-style: italic; margin: 0;">
+        Please come back on the day of event
+      </p>
+    </div>
+
+
 
     <div class="seating-result-wrapper" id="seating-result">
       <div id="guest-found" style="text-align:center; margin-bottom:24px; font-family:'Cormorant Garamond'; font-size:24px;">
@@ -386,16 +395,7 @@ setInterval(() => {
   document.getElementById('seconds').innerText = Math.floor((d%(1000*60))/1000);
 }, 1000);
 
-const guests = [
-  { name: 'Ahmed Hassan', tableId: 'table-top', tableName: 'Top Table' },
-  { name: 'Sara Hassan', tableId: 'table-top', tableName: 'Top Table' },
-  { name: 'Omar Khalil', tableId: 'table-l1-out', tableName: 'Left Table 1 (Outside)' },
-  { name: 'Layla Khalil', tableId: 'table-l1-in', tableName: 'Left Table 1 (Inside)' },
-  { name: 'Rania Yousef', tableId: 'table-l2-out', tableName: 'Left Table 2 (Outside)' },
-  { name: 'Mohammad Tariq', tableId: 'table-l2-in', tableName: 'Left Table 2 (Inside)' },
-  { name: 'Fatima Tariq', tableId: 'table-r1-in', tableName: 'Right Table 1 (Inside)' },
-  { name: 'Khalid Ibrahim', tableId: 'table-r1-out', tableName: 'Right Table 1 (Outside)' }
-];
+const guests = [];
 
 const searchInput = document.getElementById('gsearch');
 const autocompleteList = document.getElementById('autocomplete-list');
